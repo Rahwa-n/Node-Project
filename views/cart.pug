@@ -1,0 +1,82 @@
+extends ./layout.pug
+block content
+  
+  nav.navbar.navbar-expand-md.navbar-light.justify-content-between.fixed-top
+    a.navbar-brand(href='/')
+      img.logo.my-2(src='../img/logo_edited1.png' alt='logo')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarsExampleDefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarsExampleDefault.collapse.navbar-collapse.justify-content-end
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link(href='/')
+            | Home
+            span.sr-only (current)
+        li.nav-item
+          a.nav-link(href='/about') About
+        li.nav-item
+          a.nav-link(href='/menu') Menu
+        li.nav-item
+          a.nav-link(href='/services') Services
+        li.nav-item.active
+          a.nav-link(href='/contact') Contact
+        li.nav-item
+          a.nav-link(href='/register') Register
+        li.nav-item
+          a.nav-link(href='/login') Login
+      .ml-3.top-search
+        // util search
+        form.form-inline(method='get' action='')
+          input(type='hidden' name='_token' value='')
+          input#query.form-control.searchbox(type='search' name='query' placeholder='Search')
+          span.input-group-btn
+            button.btn.btn-outline-info.my-2.my-sm-0.text-white.bu(type='submit') Search
+      .menu-top-wrapper
+        .ml-3.acct_user.d-flex
+          // util profile
+          a(href='/profile')
+            .circle1
+              .user_image
+                i.fas.fa-user-alt.text-white
+        .ml-2.acct_srch.d-flex
+          // shopping cart
+          .ml-2.circle
+            a(href='/cart')
+              i.fas.fa-shopping-cart.text-white
+
+  .container.d-flex.h-100.align-items-center.justify-content-center.register
+    .h1.text-black.mx-auto.mt-0.mb-3.text-center.custom_lineheight Your Cart
+        //- .container.page.my-5
+          span#status
+  if menus
+  .row
+    .col-md-6.col-md-6.col-md-offset-3.col-sm-offset-3.yourCart
+      ul.list-group
+      each cartItem in items
+        li.list-group-item
+          //- span.badge #{cartItem.qty}
+          strong.cart 
+            | #{cartItem.item.name} 
+          span.label.label-success.cart #{cartItem.price}
+          .btn-group.action
+            button.btn.btn-primary.btn-xs.dropdown-toggle(type='button' data-toggle='dropdown')  Action 
+             
+            span.label.label-success.carts #{cartItem.qty}
+            ul.dropdown-menu
+              li
+                a(href='#') Reduced by 1
+              li
+                a(href='#') Remove All
+      .row
+        .col-sm-6.col-md-6.col-md-offset-3.col-sm-offset-3
+        strong  Total: #{totalPrice}
+        hr
+        .row
+        .col-sm-6.col-md-6.col-md-offset-3.col-sm-offset-3
+        a.btn.btn-success(href='/checkout' type='button') Checkout
+        .row
+        .col-sm-6.col-md-6.col-md-offset-3.col-sm-offset-3
+        //- h2 No Items in Cart
+
+
+                

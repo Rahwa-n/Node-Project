@@ -1,0 +1,175 @@
+extends ./layout.pug
+block content
+  // navbar
+  nav.navbar.navbar-expand-md.navbar-light.justify-content-between.fixed-top
+    a.navbar-brand(href='/')
+       img.logo.my-2(src='../img/logo_edited1.png' alt='logo')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarsExampleDefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarsExampleDefault.collapse.navbar-collapse.justify-content-end
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link(href='/')
+            | Home
+            span.sr-only (current)
+        li.nav-item
+          a.nav-link(href='/about') About
+        li.nav-item
+          a.nav-link(href='/menu') Menu
+        li.nav-item.active
+          a.nav-link(href='/services') Services
+        li.nav-item
+          a.nav-link(href='/contact') Contact
+        li.nav-item
+          a.nav-link(href='/register') Register
+        li.nav-item
+          a.nav-link(href='/login/') Login
+      .ml-3.top-search
+        // util search
+        form.form-inline(method='get' action='')
+          input(type='hidden' name='_token' value='')
+          input#query.form-control.searchbox(type='search' name='query' placeholder='Search')
+          span.input-group-btn
+            button.btn.btn-outline-info.my-2.my-sm-0.text-white.bu(type='submit') Search
+      .menu-top-wrapper
+        .ml-3.acct_user.d-flex
+          // util profile
+          a(href='/profile')
+            .circle1
+              .user_image
+                i.fas.fa-user-alt.text-white
+        .ml-2.acct_srch.d-flex
+          // shopping cart
+          .ml-2.circle
+            a(href='/cart')
+              i.fas.fa-shopping-cart.text-white
+  // /navbar
+  // Services
+  section.menu-area.mb-4
+    .container
+      #menu.row
+        h1.mb-5.info Our Restaurant Services
+        .row
+          .col-md-6.col-lg-4
+            .card.mb-3.shadow
+              img.card-img-top(src='../img/buffe.jpg' alt='Buffe Services')
+              .card-body
+                h4.card-title.font-weight-bold Buffe Services
+                p.card-text
+                
+          .col-md-6.col-lg-4
+            .card.mb-3.shadow
+              img.card-img-top(src='../img/beyanetu.jpg' alt='Family Dine In')
+              .card-body
+                h4.card-title.font-weight-bold Family Dine In
+                p.card-text
+               
+          .col-md-6.col-lg-4
+            .card.mb-3.shadow
+              img.card-img-top(src='../img/relaxing_area.jpg' alt='Relaxing Area')
+              .card-body
+                h4.card-title.font-weight-bold Relaxing Area
+                p.card-text
+                
+          .col-md-6.col-lg-4
+            .card.mb-3.shadow
+              img.card-img-top(src='../img/coffe.jpg' alt='Traditional Coffee')
+              .card-body
+                h4.card-title.font-weight-bold Traditional Coffee
+                p.card-text
+               
+          .col-md-6.col-lg-4
+            .card.mb-3.shadow
+              img.card-img-top(src='../img/traditional_music1.jpg' alt='Traditional Music')
+              .card-body
+                h4.card-title.font-weight-bold Traditonal Music
+                p.card-text
+                
+          .col-md-6.col-lg-4
+            .card.mb-3.shadow
+              img.card-img-top(src='../img/delivery_service.jpg' alt='Delivery Service')
+              .card-body
+                h4.card-title.font-weight-bold Delivery Service
+                p.card-text
+           
+  // table with services
+  hr
+  section
+    .content_serv
+      div
+        h4.subtitle.text-center The list represents currently available services. Call for reservation.
+      table.table.table-bordered.table_serv
+        thead
+          tr.tdcolor
+            th(scope='col') Service
+            th(scope='col') Seats
+            th(scope='col') Table Shape
+            th(scope='col') Section
+        tbody
+          tr
+            td Buffe Service
+            td Single or Family and Friends
+            td Round Table
+            td.section Main Dine Area
+          tr
+            td Family Dine In
+            td 6 - 10
+            td Round Table(Agelgel)
+            td.section Main Dine Area
+          tr
+            td Relaxing Area
+            td 6 - 10
+            td Square Medium or Small Table
+            td.section Private Room
+          tr
+            td Coffe Ceremony
+            td 6 - 10
+            td Round Table Large
+            td.section Private Room
+          tr
+            td Traditional Music
+            td More than 20 people
+            td Square Medium
+            td.section Main Dining Room
+          tr
+            td Delivery Service
+            td  - 
+            td Square Small Table
+            td.section Main Dininig Room
+        tfoot
+          tr.tdcolor
+            td#signature(colspan='4') Eritrean Traditional Food | eritrean_traditonal@gmail.com
+  // footer area
+  footer.text-center.text-white
+    // Grid container
+    .container.pt-4
+      // Section: Social media
+      section.mb-4
+        // Instagram
+        a.btn.btn-primary.btn-floating.m-1(style='background-color: #ac2bac;' href='https://www.instagram.com/rahwa_netsereab/' role='button')
+          i.fab.fa-instagram
+        // /Instagram
+        // Linkedin
+        a.btn.btn-primary.btn-floating.m-1(style='background-color: #0082ca;' href='https://www.linkedin.com/in/rahwa-mehreteab/' role='button')
+          i.fab.fa-linkedin-in
+        // /Linkedin
+        // Github
+        a.btn.btn-primary.btn-floating.m-1(style='background-color: #333333;' href='https://github.com/Rahwa-n' role='button')
+          i.fab.fa-github
+        // /Github
+        br
+        br
+        a.mail.text-white(href='mailto:rahwa@example.com?subject=About the traditional food')
+          i.fa.fa-envelope(style='font-size:24px;')
+          | Click here to send us an email
+      // Section: Social media
+    // Grid container
+    // Copyright
+    .text-center.text-white.p-3
+      | Copyright &copy; Eritrean Traditional Food 2021
+    // Copyright
+  // Optional JavaScript
+  // jQuery first, then Popper.js, then Bootstrap JS
+  script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js' integrity='sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4' crossorigin='anonymous')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js' integrity='sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1' crossorigin='anonymous')

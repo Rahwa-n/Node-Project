@@ -1,0 +1,68 @@
+extends ./layout.pug
+block content
+  // navbar
+  nav.navbar.navbar-expand-md.navbar-light.justify-content-between.fixed-top
+    a.navbar-brand(href='/')
+      img.logo.my-2(src='../img/logo_edited1.png' alt='logo')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarsExampleDefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarsExampleDefault.collapse.navbar-collapse.justify-content-end
+      #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav
+        //- li.nav-item
+        //-   a.nav-link(href='/recipe') Recipes
+        //- li.nav-item
+        //-   a.nav-link(href='/user') Users
+        //- li.nav-item
+        //-   a.nav-link(href='/order') Orders
+        //- li.nav-item
+        //-   a.nav-link(href='/services') Services
+        //- li.nav-item
+        //-   a.nav-link(href='/delivery') Delivery
+        //- li.nav-item
+        //-   a.nav-link(href='/login') Login
+        li.nav-item
+          a.nav-link(href='#') Logout
+        // util search
+  div.class="container"
+    messages('messages', locals)
+  div.col-10.ml-sm-auto.px-4
+    if successes
+      for success in successes
+        div.alert.alert-success #{ success }
+    if errors
+      for error, i in errors
+        div.alert.alert-danger #{ error }
+    
+  section.menu-area.mb-r    
+  .container
+    .head.h1
+      | Admin: 
+      em Menu Page
+    p
+      a(style='color: white;' href='/create')
+        .btn.btn-success Add Menu +
+    .table-responsive
+      table.table.table-striped
+        thead.thead-dark
+          tr
+              th(scope='col') Menu Id
+              th(scope='col') Menu Name
+              th(scope='col') Menu Description
+              th(scope='col') Menu Price 
+              th(scope='col') Edit
+              th(scope='col') Delete
+                  
+        tbody
+          each menu in menus
+            tr
+              td= menu._id
+              td= menu.name
+              td= menu.description 
+              td= menu.price
+              td
+                a.btn.btn-primary(href="/edit/" + menu._id) Edit 
+              td
+                  form.delete(onsubmit="return confirm('Do you really want to delete this record?')" action='/admin' method='post')
+                    input(type='hidden' name='menu._id' value='menu._id')
+                    a.btn.btn-danger(href='/delete/' + menu._id onclick="return confirm('Are you sure you want to delete this menu?');") Delete

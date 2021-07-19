@@ -1,0 +1,336 @@
+body {
+  font-family:  'Nanum Gothic', sans-serif;
+  font-weight: 500;
+  background-color: #fff;
+  
+}
+
+/*navbar bg color*/
+.justify-content-between{
+/*  background-color: #ff99cc;*/
+  margin-bottom: 20px;
+  color: #fff;
+  background: #4f4f4d;
+/*  background: linear-gradient(to bottom, #33ccff 10%, #ce6355 100%);*/
+  
+}
+.navbar-light .navbar-nav .nav-link {
+  color:  #fff;
+  font-weight: 700;
+
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  text-decoration-color: antiquewhite;
+/*  background-color: #ccc;*/
+  color: #bca86d;
+  
+}
+.navbar-light .navbar-nav .active>.nav-link{
+ color: #fff;
+  font-weight: 700;
+  
+}
+.navbar-light .navbar-nav .active>.nav-link:hover{
+  color: #bca86d;
+}/*end of nav bar style}*/
+
+.active{
+  border-bottom: 0.25rem solid #bca86d;
+}/* end of navigation bar style */
+
+/*breadcrumbs bg color style*/
+.navbar-toggler-icon{
+  background-color: #bca86d;
+  border: #fff;
+}
+/*hero image style*/
+.jumbotron {
+  margin-top: 115px;
+  background-image: url('../img/asmara_night1.jpg'); 
+  background-size: cover;
+}
+
+/*utility nav*/
+.menu-top-wrapper {
+    display: flex;
+}
+
+/*search button*/
+.bu:hover{
+  background-color: #bca86d;
+  color: #000;
+}
+/*hero image text style*/
+.display-2{
+  font-size: 4rem!important;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.479);
+  padding: 10px;
+  color: #ccdc1a;
+  text-shadow:  1px 1px #000;
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+}
+
+/*hero image paragraph style*/
+.food{
+  font-size: 24px;
+}
+
+/*call out button style*/
+.btn-group-vertical>.btn, .btn-group>.btn{
+ font-weight: 400;
+  font-size: 24px;
+}
+
+/*callout button color change on hover*/
+.btn-group-vertical>.btn, .btn-group>.btn:hover {
+  background-color: #4f4f4d;
+  color: yellow;
+}
+
+/*style for home bottom list content*/
+.list-group{
+  font-size: 1rem;
+}
+/*about page h1 styele*/
+.mb-5{
+  margin-top: 150px;
+}
+
+/*about page content style*/
+.about_txt{
+  margin-left: 35px;
+}
+
+/*menu page the first h1 style*/
+.info{
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #000;
+  text-shadow:  1px 1px #fff;
+}
+/* menu page price button style*/
+.product-price{
+  background-color: #e3d159;
+  font-weight: 700;
+  cursor: pointer;  
+}
+
+/*menu page order button style*/
+.product-order{
+  background-color: deepskyblue;
+  font-weight: 700;
+  cursor: pointer; 
+}
+/*product price and order a tag style*/
+.product-price a{
+  color: #000;
+  text-decoration: none;
+}
+.product-order a{
+  color: #000;
+  text-decoration: none;
+}/* end of product order and price a tag style*/
+
+/*style each column menu page*/
+.shadow {
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+min-height: 200px;
+}
+
+/*service page table style*/
+.subtitle{
+  color: #000;
+  font-weight: 500;
+}
+hr{
+  background-color: #bca86d;
+}
+
+/*container contact style*/
+.container_contact{
+  width: 95%;
+}
+/*Contact us page image style*/
+.con_img{
+/*  width: 80%;*/
+  margin-left: 30px;
+}
+
+/*contact us page h1 style*/
+.con_header{
+  margin-top: 150px;
+  margin-bottom: 30px;
+}
+
+/*register and login page h1 style*/
+.register, .login{
+  margin-top: 150px;
+}
+
+/*register and login page space at the bottom*/
+.re_form, .lo_form{
+  margin-bottom: 50px;
+}
+
+
+/*footer background color*/
+footer{
+  margin-top: 20px;
+  background: #4f4f4d;
+  color: #fff;
+}
+/*footer style for list*/
+.footer_content{
+  list-style-type: none;
+   color: #fff;
+}
+/*footer widget menu*/
+.footer_widget_menu{
+  list-style-type: none;
+ 
+}
+/*footer widget menu link*/
+.footer_widget_menu li a{
+  list-style-type: none;
+  color: #fff;
+}
+/*footer copyright*/
+.pb-5, .py-5 {
+  padding-top: 1rem!important;
+  padding-bottom: 1rem!important;
+}
+
+/*style for table*/
+ table {
+  border-collapse: collapse;
+  background-color: #fff;  
+}
+.table_serv {
+/*margin-left: 150px;*/
+  width: 60%;
+  margin: 0 auto;
+  border-spacing: 0px;
+  border-collapse: collapse;
+} 
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+table tr.tdcolor {
+  background-color: #0e0e0e;
+  color: #fff;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+table td, th {
+  border: 1px solid #0e0e0e;
+  padding: 3px;
+  text-align: center;
+}
+td {
+  display: table-cell;
+  vertical-align: inherit;
+}
+/*create container style*/
+.create.container {
+  margin-top: 100px;
+  margin-left: 200px;
+}
+/*header style in edit menu page*/
+.head{
+  margin-top: 140px;
+  text-align: center;
+}
+
+/* edit form input space in between */
+.form input {
+  margin-right: 15px;
+}
+/*edit button in edit page style*/
+.edit button{
+  background-color: rgb(67, 67, 219);
+  color: #fff;
+  padding: 10px;
+  font-weight: bolder;
+}
+/*button in create page style*/
+.create button{
+  background-color: rgb(20, 148, 69);
+  color: #fff;
+  padding: 10px;
+  font-weight: bolder;
+}
+/*detail page style*/
+.container-detail {
+  /* margin-top: 120px; */
+  margin-left: 100px;
+}
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 45%;
+  padding: 0 10px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  /* display: table; */
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: flex;
+    /* margin-bottom: 20px; */
+  }
+}/*end of detail page style*/
+
+
+
+.section{
+  background-color: #ccc;
+/*} end of table style*/
+      
+}
+.UserView {
+  background: url("https://cdn.auth0.com/blog/whatabyte-portal/patio.jpeg") left
+    bottom;
+  background-size: cover;
+}
+ .yourCart {
+    width: 100%; 
+    margin-left: 350px;
+   margin-top: 15px; 
+ }     
+.cart{
+  padding-right: 45px;
+  padding-left: 10px;
+}
+
+.carts{
+  padding-left: 45px;
+}
+
+.btn-group.action {
+  padding-left: 30px;
+}
+
+
+
+
+
+
+
+
+
