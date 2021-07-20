@@ -561,6 +561,30 @@ app.get('/checkout', (req, res, next) => {
   res.render('checkout', {total: cart.totalPrice});
 });
 
+app.post('/checkout', (req, res, next) => {
+  if (!req.session.cart){
+    return res.redirect('cart');
+  }
+  var cart = new Cart(req.session.cart);
+
+  var stripe = require('stripe')(
+    "sk_test_pweF4VBIjmx6qkT3wgvKUk04"
+  );
+  stripe.charges.create({
+      amount: cart.totalPrice * 100,
+      currency: 'cnd',
+      source: "req.body.stripeToken", //obtaine with checkout.js
+      description: "Test Charge"
+  }, function(err, charge){
+      if (err) {
+        req.flash('error, err.message');
+        return res.redirecct('/checkout')
+      }
+      req.flash('success', 'Successfuly bought Product!');
+      req.cart = null;
+      res.redirect('/')
+  });
+});
 /**
  * this is a route for admin to display m
  * menus and do the CRUD
